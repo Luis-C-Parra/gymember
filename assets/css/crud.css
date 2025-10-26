@@ -1,0 +1,103 @@
+/* ----------------------------- */
+/* CRUD - EXTENSIÓN DE STYLE.CSS */
+/* ----------------------------- */
+
+.titulo {
+  margin: 40px 0 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+/* ----------------------------- */
+/* TABLAS                        */
+/* ----------------------------- */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: var(--font-second) !important;
+  margin-bottom: 60px; 
+}
+
+.tabla thead {
+  background: var(--bg-soft);
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.tabla th,
+.tabla td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.tabla tbody tr:hover {
+  background: #1a1b21;
+}
+
+.acciones-tabla {
+  display: flex;
+  gap: 8px;
+}
+
+/* ----------------------------- */
+/* BOTONES                       */
+/* ----------------------------- */
+.btn-danger {
+  border-color: #f44336;
+  color: #f44336;
+}
+
+.btn-danger:hover {
+  background: #f44336;
+  color: white;
+}
+
+/* ----------------------------- */
+/* FORMULARIOS                   */
+/* ----------------------------- */
+.formulario {
+  max-width: 500px;
+  margin: 40px auto 80px; 
+  background: var(--card);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.formulario input,
+.formulario select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-soft);
+  color: var(--text);
+  margin-bottom: 18px;
+  font-family: inherit;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  outline: 1px solid var(--accent);
+}
+
+.formulario .acciones {
+  justify-content: space-between;
+}

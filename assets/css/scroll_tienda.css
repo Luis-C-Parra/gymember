@@ -1,0 +1,35 @@
+/* Contenedor que maneja la fila de productos */
+.products-container {
+    display: flex; /* CRUCIAL: Alinea todos los productos en una sola fila */
+    gap: 20px; /* Separación horizontal razonable entre las tarjetas */
+    overflow-x: auto; /* HABILITA el desplazamiento horizontal manual (con el mouse o touch) */
+    padding-bottom: 15px; /* Espacio para que la barra de desplazamiento no se pegue al contenido */
+    /* Puedes ocultar la barra de scroll si quieres depender solo de los botones */
+    /* scrollbar-width: none; /* Firefox */
+}
+
+/* Las tarjetas individuales de producto */
+.product-card {
+    flex-shrink: 0; /* IMPEDIR que las tarjetas se compriman y mantengan su ancho */
+    width: 250px; /* Define el ancho fijo de cada tarjeta (ajusta este valor) */
+    
+    /* Reglas para la imagen dentro de la tarjeta */
+}
+
+/* Estilo para los botones de scroll */
+.scroll-buttons {
+    display: flex;
+    gap: 10px;
+}
+.scroll-btn {
+    padding: 8px 15px;
+    background: #ff007c; /* Acento magenta */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+.scroll-btn:hover {
+    background: #e0006c;
+}

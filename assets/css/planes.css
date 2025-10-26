@@ -1,0 +1,224 @@
+/* Sección de planes */
+.planes {
+  max-width: 1200px;
+  margin: 100px auto; /* Agrega 60px arriba */
+  text-align: center;
+}
+
+.planes h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+/* Toggle (tu estilo base + ajustes para botones) */
+.toggle {
+  display: inline-flex;
+  background-color: var(--border);
+  border-radius: 50px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.toggle-btn {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle .activo {
+  background-color: var(--text);
+  color: var(--bg);
+  border-radius: 50px;
+}
+
+.toggle-btn:hover,
+.toggle-btn:focus {
+  outline: none;
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+.toggle-ahorro {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* Grupos de Planes (nuevo: para ocultar/mostrar con transiciones) */
+.grupo-planes {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.grupo-planes.activo {
+  display: block;
+  opacity: 1;
+}
+
+/* Contenedor de tarjetas */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Tarjetas (tu estilo base) */
+.card {
+  padding: 25px 20px;
+  min-height: 500px;
+  background-color: var(--bg-soft);
+  border-radius: 15px;
+  position: relative;
+}
+
+.card.secundon {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card.secundon:hover {
+  transform: scale(1.05);
+  background-color: var(--accent);
+  box-shadow: 0 0 20px rgba(255, 45, 172, 0.4);
+  z-index: 2;
+}
+
+/* Agregamos animaciones suaves */
+.card.secundon .titulo,
+.card.secundon .btn {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Cambios de color cuando hay hover en la tarjeta */
+.card.secundon:hover .titulo {
+  color: var(--text);
+}
+.card.secundon:hover .btn {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.etiqueta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--text);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-bottom-left-radius: 8px;
+}
+
+.titulo {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.card.destacado .titulo {
+  color: var(--text);
+}
+
+.precio {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text);
+}
+
+.frecuencia {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+#planesMensual .card.secundon:hover .frecuencia {
+  color: var(--text); 
+}
+
+#planesAnual .card.secundon:hover .frecuencia {
+  color: var(--bg); 
+}
+
+.ahorro {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.beneficios {
+  list-style: none;
+  text-align: left;
+  line-height: 2;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.beneficios li:has(iconify-icon[icon*="close-circle"]) {
+  color: var(--muted);
+}
+
+/* Botón (tu estilo base + alias para JS) */
+.btn-inscribir {
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  font-weight: 500;
+  border-radius: 20px;
+  background-color: var(--accent);
+  color: var(--text);
+  border: 1px solid transparent;
+  font-family: var(--font-second);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%; /* Para que ocupe todo el ancho en tarjetas */
+  margin-top: 10px;
+}
+
+.btn-inscribir:hover {
+  background-color: var(--accent);
+}
+
+.btn-inscribir.negro {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.btn-inscribir.negro:hover {
+  background-color: var(--bg-soft);
+}
+
+/* Responsivo (nuevo: para mobile, basado en tu diseño) */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .planes h2 {
+    font-size: 2rem;
+  }
+
+  .toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  .toggle-ahorro {
+    font-size: 0.9rem;
+  }
+}

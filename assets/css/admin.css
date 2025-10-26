@@ -1,0 +1,453 @@
+/* ==================================== */
+/* 0. VARIABLES (Asegúrate de que existan en otro CSS si las usas) */
+/* Si no tienes un archivo de variables, puedes definirlas aquí: */
+/*
+:root {
+    --bg-dark: #111;
+    --bg-soft: #1a1a1a; 
+    --text-light: white;
+    --accent: #ff007c; 
+    --danger: #f44336;
+    --border-dark: #2a2a2a;
+}
+*/   
+/* ==================================== */
+
+/* 1. RESET Y FONDO GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111; /* FONDO PRINCIPAL OSCURO */
+    color: white; /* TEXTO PRINCIPAL CLARO */
+}
+
+/* ==================================== */
+/* 2. ENCABEZADO (Navbar) - (Asegúrate de que estas reglas no estén ya en otro CSS si lo tienes) */
+/* Si tu navbar ya tiene estilos en otro lado (ej: style.css), este bloque podría ser opcional */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #111; /* Mismo color que el body */
+    color: white;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.logo span {
+    color: #ff007c; /* Acento magenta */
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+nav a:hover, nav a.active {
+    color: #ff007c;
+}
+/* ==================================== */
+
+/* 3. CONTENEDOR PRINCIPAL */
+.admin-container {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.admin-title {
+    font-size: 1.8rem;
+    color: white; /* Corregido a blanco para tema oscuro */
+}
+
+/* ==================================== */
+/* 4. BOTONES Y ACCIONES */
+
+/* Botón de "Agregar Nuevo" (Estilo de alto contraste) */
+.btn-nuevo {
+    padding: 12px 25px; /* Más grande para el encabezado */
+    background: #ff007c; /* Fondo de acento (Magenta/Rosado) */
+    color: white; 
+    text-decoration: none;
+    border-radius: 8px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255, 0, 124, 0.4);
+    transition: background 0.3s;
+}
+
+.btn-nuevo:hover {
+    background: #e0006c; 
+}
+
+/* Estilos de botones de acción de la tabla */
+.action-buttons a, 
+.action-buttons button {
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 8px 15px; /* Aumentado el padding para el look de las cards */
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+}
+
+/* Enlace/Botón Editar */
+.btn-editar {
+    background: #2a2a2a; /* Fondo gris oscuro, sutil */
+    color: #ff007c; /* Texto de acento (como se ve en la imagen de ejemplo) */
+    border: 1px solid #ff007c; /* Borde de acento */
+}
+
+.btn-editar:hover {
+    background: #ff007c;
+    color: white;
+}
+
+/* Botón Eliminar */
+.btn-eliminar {
+    background: #2a2a2a; 
+    color: #f44336; /* Color de peligro */
+    border: 1px solid #f44336;
+}
+
+.btn-eliminar:hover {
+    background: #f44336;
+    color: white;
+}
+/* ==================================== */
+
+/* 5. TABLA DE PRODUCTOS */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1a1a1a; /* Fondo de tabla ligeramente más claro que el body */
+    box-shadow: none; 
+    border-radius: 4px;
+    overflow: hidden; 
+    color: white;
+}
+
+.product-table th,
+.product-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #2a2a2a; /* LÍNEAS DIVISORIAS SUTILES */
+}
+
+.product-table th {
+    background-color: #1a1a1a; /* Mismo fondo que la tabla */
+    color: #ff007c; /* Color de acento para los títulos de columna */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Imagen en la tabla */
+.product-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Estado Activo / Inactivo */
+.status-activo {
+    color: lightgreen;
+    font-weight: bold;
+}
+.status-inactivo {
+    color: #ffcc00; /* Un amarillo/naranja más suave */
+    font-weight: bold;
+}
+/* ==================================== */
+
+/* 6. ESTILOS DE FORMULARIO PARA TIENDA(Crear/Editar) */
+.crud-form {
+    background: #1a1a1a; /* Mismo fondo que la tabla */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    color: white;
+}
+
+.crud-form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.crud-form input[type="text"],
+.crud-form input[type="number"],
+.crud-form textarea,
+.crud-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333; /* Borde oscuro */
+    background: #2a2a2a; /* Fondo de campo oscuro */
+    color: white;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.crud-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* El botón de guardar es el mismo que .btn-nuevo, puedes usar .btn-submit */
+.btn-submit {
+    background: #ff007c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #e0006c;
+}
+/* ==================================== */
+
+/* 7. ALERTAS Y MENSAJES */
+.alerta-exito {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #004d00; /* Fondo verde oscuro */
+    color: lightgreen;
+    border: 1px solid #008000;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.alerta-error {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #660000; /* Fondo rojo oscuro */
+    color: #ff6666;
+    border: 1px solid #cc0000;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* ==================================== */
+/* 8. FOOTER (Asegúrate que tenga la clase 'site-footer' o similar si está incluido) */
+/* Agregando estilos básicos oscuros al footer */
+.footer {
+    background: #0d0d0d;
+    color: #999;
+    padding: 20px 5%;
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid #2a2a2a;
+}
+/* ==================================== */
+/* 9. CORRECCIÓN DE TARJETA Y MINIATURA (10%) */
+/* ==================================== */
+
+/* La cuadrícula SLIDER se mantiene para organizar las tarjetas horizontalmente */
+.slider__items {
+    display: grid;
+    /* Esto crea columnas que se ajustan automáticamente */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 24px; 
+    margin-top: 20px;
+}
+
+/* Contenedor de la Tarjeta (Habilitamos Flexbox para alinear imagen y texto dentro) */
+.card-item__link {
+    display: flex; /* Alinea la imagen y el texto horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 15px; /* Espacio interno para que no se peguen los elementos */
+    background: #1a1a1a; /* Fondo de la tarjeta (si aplica) */
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Contenedor de la Imagen: Fuerza el 10% del ancho de la tarjeta */
+.card-item__cover {
+    /* El ancho de la miniatura es el 10% del ancho de la tarjeta */
+    width: 100%; 
+    
+    /* TRUCO CUADRADO: La altura es el 10% del ancho (1:1 ratio) */
+    padding-bottom: 100%;
+    
+    /* El resto de reglas se mantienen */
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px; /* Un poco menos de borde que la tarjeta */
+    
+    /* Asegura que la miniatura esté a un lado del texto */
+    margin-right: 15px; 
+    box-shadow: none; /* Quitamos la sombra, no es necesaria para una miniatura */
+}
+
+/* La Imagen en sí */
+.card-item__cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Contenedor de Texto: Ocupa el espacio restante */
+.card-item__content {
+    flex-grow: 1; /* Ocupa el 90% restante del ancho de la tarjeta */
+}
+
+/* ERROR DE SINTAXIS CORREGIDO: card-item__cover */
+.card-item__link:hover .card-item__cover img { 
+    transform: scale(1.05);
+}
+/* Estilo del Contenedor Lateral de Filtros */
+.aside {
+    width: 300px;
+    background: #1a1a1a; /* Fondo oscuro, un poco más claro que el body */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    color: white; /* Asegura que el texto dentro sea blanco */
+}
+
+.filters {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #2a2a2a; /* Separador sutil */
+}
+
+.title_filters {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ff007c; /* Título de filtro con color de acento */
+    text-transform: uppercase;
+}
+
+/* Estilo para Campos de Texto, Número y Select */
+/* 1. Ajuste General de Inputs (Reemplaza las reglas anteriores si existen) */
+.filters input[type="text"],
+.filters select,
+.filters input[type="number"] {
+    /* Fondo oscuro y color de texto para integración */
+    background: #2a2a2a; 
+    color: white;
+    border: 1px solid #444; 
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.95rem;
+    /* Asegura que ocupen el 100% de su contenedor (antes de Flexbox) */
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+/* 2. Alineación de PRECIO (Mínimo — Máximo) */
+.filters > div {
+    /* CRUCIAL: Utiliza Flexbox para que los campos estén en línea */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre los campos y el guion */
+    width: 100%;
+}
+
+.filters > div input[type="number"] {
+    /* Permite que ambos inputs crezcan y ocupen el espacio restante por igual */
+    flex: 1; 
+    margin-bottom: 0; /* Asegura que no haya margen inferior desalineando la línea */
+}
+
+.filters > div span {
+    flex-shrink: 0; /* Evita que el guion se comprima */
+    color: white;
+}
+
+/* 3. Alineación de Checkboxes (Categorías) */
+.check_filters {
+    /* Usa Flexbox para alinear el checkbox y la etiqueta en línea */
+    display: flex;
+    flex-wrap: wrap; /* Permite que las categorías pasen a la siguiente línea si es necesario */
+    gap: 15px; /* Espacio entre cada categoría */
+    margin-top: 10px;
+}
+
+.check_filters label {
+    margin-left: 0;
+    font-size: 0.95rem;
+}
+.check_filters input[type="checkbox"] {
+    /* Asegura que el checkbox y el label estén en la misma línea */
+    margin-right: 5px; 
+}
+
+/* Botón de Aplicar Filtros */
+.btn-filtrar {
+    width: 100%;
+    padding: 12px;
+    background: #ff007c; /* Mismo estilo que el botón principal de 'Agregar' */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.btn-filtrar:hover {
+    background: #e0006c;
+}
+
+/* ======================================= */
+/* ESTRUCTURA PRINCIPAL DE LA TIENDA */
+/* ======================================= */
+.container {
+    /* CRUCIAL: Usa Grid para definir las columnas */
+    display: grid;
+    /* Define dos columnas: 300px para el ASIDE, y 1fr (el resto del espacio) para los productos */
+    grid-template-columns: 300px 1fr; 
+    gap: 40px; /* Espacio entre las dos columnas */
+    
+    /* El resto de las propiedades de tu .container se mantienen */
+    padding: 40px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* La barra lateral (Filtros) */
+.aside {
+    /* Ya está bien posicionado por el grid, solo aseguramos que no se estire */
+    grid-column: 1 / 2;
+}
+
+/* La sección de productos */
+.full-carousel {
+    /* Aseguramos que ocupe la segunda columna */
+    grid-column: 2 / 3; 
+}

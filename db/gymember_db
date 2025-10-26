@@ -1,0 +1,56 @@
+CREATE DATABASE IF NOT EXISTS gymember_db;
+USE gymember_db;
+
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  usuario VARCHAR(100) NOT NULL UNIQUE,
+  contrasena VARCHAR(255) NOT NULL,
+  rol ENUM('admin','recepcion','entrenador') NOT NULL DEFAULT 'recepcion',
+  nombre VARCHAR(150),
+  email VARCHAR(150),
+  creado_en DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE miembros (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  dni VARCHAR(20),
+  nombre VARCHAR(100),
+  apellido VARCHAR(100),
+  telefono VARCHAR(50),
+  email VARCHAR(150),
+  foto VARCHAR(255) DEFAULT NULL,
+  estado ENUM('activo','vencido','suspendido','prueba') DEFAULT 'activo',
+  creado_en DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE planes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100),
+  precio DECIMAL(10,2),
+  duracion_dias INT,
+  descripcion TEXT,
+  creado_en DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE pagos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  socio_id INT NOT NULL,
+  monto DECIMAL(10,2),
+  metodo ENUM('efectivo','transferencia','tarjeta') DEFAULT 'efectivo',
+  fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
+  nota TEXT,
+  FOREIGN KEY (socio_id) REFERENCES miembros(id) ON DELETE CASCADE
+);
+
+CREATE TABLE productos (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `precio` decimal(10,2) NOT NULL,
+  `categoria` enum('ropa','suplementos','accesorios','otros') NOT NULL,
+  `img` varchar(255) DEFAULT NULL,
+  `descripcion` text,
+  `stock` int(11) NOT NULL DEFAULT '0',
+  `activo` tinyint(1) NOT NULL DEFAULT '1',
+  `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `fecha_actualizacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

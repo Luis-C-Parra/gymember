@@ -1,0 +1,100 @@
+.section-clases {
+  padding: 80px 0;
+  background-color: #f7f7f7; /* Fondo blanco suave */
+  color: #111;
+}
+
+.section-clases h2 {
+  font-family: var(--font-primary);
+  color: #111;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section-clases p {
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.bloque {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 100px;
+}
+
+.bloque .texto {
+  flex: 1;
+  max-width: 550px;
+}
+
+.bloque .imagen {
+  flex: 1;
+}
+
+.bloque .imagen img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.bloque ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.bloque ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.icon {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.btn-vermas {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-vermas iconify-icon {
+  color: #000;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-vermas:hover iconify-icon {
+  transform: translateX(4px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .bloque,
+  .bloque.invertido {
+    flex-direction: column;
+  }
+  
+  .bloque .texto {
+    max-width: 100%;
+  }
+
+  .section-clases {
+    padding: 60px 0;
+  }
+}
+

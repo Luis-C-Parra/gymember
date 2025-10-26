@@ -1,0 +1,98 @@
+/* ----------------------------- */
+/* FOOTER                        */
+/* ----------------------------- */
+footer {
+  background: var(--bg-soft);
+  padding: 60px 20px 30px;
+  color: var(--muted);
+}
+
+footer a:hover { color: var(--accent); }
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-family: var(--font-titles);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-logo .logo {
+  color: var(--text);
+  font-weight: 800;
+  margin-right: 6px;
+}
+
+.footer-text {
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.footer-links h4 {
+  color: var(--text);
+  margin-bottom: 10px;
+  font-family: var(--font-titles);
+  font-size: 1.05rem;
+}
+
+.footer-links a {
+  display: block;
+  margin: 6px 0;
+  color: var(--muted);
+  transition: color .18s ease;
+}
+
+/* Iconify icons dentro del footer (heredan color y tamaño) */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+.social-icons a {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: transparent;
+  transition: transform .12s ease, background .12s ease;
+}
+
+/* aplica color a los iconos iconify */
+.social-icons iconify-icon {
+  font-size: 1.15rem;
+  color: var(--muted);
+  transition: color .18s ease, transform .12s ease;
+}
+.social-icons a:hover iconify-icon {
+  color: var(--accent);
+  transform: scale(1.15);
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.legal-links a {
+  color: var(--muted);
+  margin-left: 12px;
+}
+
