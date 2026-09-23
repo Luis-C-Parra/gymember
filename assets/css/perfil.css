@@ -1,0 +1,126 @@
+main.perfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px);
+  background: var(--bg);
+  padding: 60px 20px;
+}
+
+.perfil-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 10px; 
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px 50px;
+  width: 420px;
+  box-shadow: 0 0 30px rgba(255, 46, 136, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.perfil-card iconify-icon {
+  font-size: 70px;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.perfil-card h2 {
+  font-family: var(--font-second);
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: var(--text1);
+}
+
+.perfil-card p.usuario {
+  font-size: 1rem;
+  color: var(--text1);
+  margin-bottom: 20px;
+}
+
+.info-group {
+  text-align: left;
+  background: var(--muted1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.info-group p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.info-group strong {
+  color: var(--accent);
+}
+
+.estado {
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.estado.activo {
+  background: rgba(139, 219, 47, 0.15);
+  color: var(--success);
+}
+
+.estado.inactivo {
+  background: rgba(255, 46, 136, 0.15);
+  color: var(--accent);
+}
+
+.btn-editar {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-editar:hover {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.perfil-foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.perfil-foto img,
+.perfil-foto iconify-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+/* Responsive */
+@media (max-width: 480px) {
+  .perfil-card {
+    width: 100%;
+    padding: 30px 25px;
+  }
+}

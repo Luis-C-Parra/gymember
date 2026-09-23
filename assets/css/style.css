@@ -1,0 +1,167 @@
+/* ----------------------------- */
+/* VARIABLES Y ROOT              */
+/* ----------------------------- */
+:root {
+  /* Colores */
+  --bg: #e8e8ef;          /* fondo principal */
+  --bg-soft: #16171b;     /* tarjetas y bloques */
+  --text: #0c0c0c;
+  --text1:#b5b0b0;         /* texto principal */
+  --muted: #323233;       /* texto secundario */
+  --muted1: #f3f2f2;      /* texto secundario 1 */
+  --accent: #ff2e88;      /* rosa principal */
+  --accent-2: #ff6aa9;    /* rosa aclarado para degradados */
+  --card: #121317;
+  --border: #262730;
+  --success: #8bdb2f;
+
+  /* Tipografías */
+  --font-primary: 'Montserrat', sans-serif;
+  --font-second: 'Poppins', sans-serif;
+}
+
+/* ----------------------------- */
+/* RESET Y BASE                  */
+/* ----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+h1{
+  font-family: var(--font-primary);
+  color: var(--text);
+}
+
+body {
+  font-family: var(--font-primary) !important;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text1);
+  min-height: 100vh;
+}
+
+a {  
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  border: 1px ;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+    padding: 15px;
+    
+    /* ESTILO INTEGRADO: Fondo blanco sólido y opaco */
+    background-color: #262730; 
+    
+    /* Borde redondeado suave para que encaje con la estética clara */
+    border-radius: 8px;
+    
+    /* Línea delgada perimetral para dar definición visual */
+    border: 1px solid #e4e6eb;
+    
+    /* Sombra muy sutil (box-shadow) para dar sensación de relieve/tarjeta */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ----------------------------- */
+/* UTILITARIOS                   */
+/* ----------------------------- */
+.container {
+  width: min(1120px, 92%);
+  margin-inline: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+/* ----------------------------- */
+/* BOTONES                       */
+/* ----------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  font-family: var(--font-second);
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  min-height: 38px;
+  gap: 6px;
+}
+
+
+.btn:hover {
+  color: var(--accent);
+}
+
+.btn.solid {
+  background: var(--accent);
+  color: var(--text);
+  border-radius: 20px;
+  border: 1px solid transparent;
+}
+
+.btn.solid:hover {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn.outline:hover {
+  background: var(--accent);
+  color: var(--text);
+  
+}
+
+.btn_simple {
+  padding: 10px 22px;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-second);
+}
+
+.btn_simple:hover {
+  color: var(--accent);
+}
+
+.flex_div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-icon {
+  width: 38px;
+  height: 38px;
+}
+
+.btn-icon iconify-icon {
+  width: 20px;
+  height: 20px;
+}
+

@@ -1,0 +1,39 @@
+Estimada profesora Maria Acri,
+
+Adjuntamos la entrega del Trabajo Práctico Integrador, realizado por los alumnos Barreto Daira, Cocabia Luis y Flores Damian, contenido en el archivo gymember.rar.
+
+Para la correcta ejecución y revisión del proyecto, le solicitamos seguir los siguientes pasos y consideraciones:
+	
+	1. Requisitos y Configuración Inicial
+
+		Entorno: El proyecto requiere un entorno local PHP y MySQL (asegúrese de ejecutar XAMPP/WAMP).
+
+		Ubicación: Descomprima el archivo gymember.rar en el directorio raíz de su servidor web local: C:\xampp\htdocs\.
+			La ruta final del proyecto será: C:\xampp\htdocs\gymember.
+
+	2. Configuración de la Base de Datos (MySQL)
+
+		La base de datos necesaria se llama gymember_db.
+
+		Archivos: Los archivos de la base de datos se encuentran dentro de la carpeta gymember/db/.
+
+		Instrucción de Importación:
+
+			Ingrese a phpMyAdmin (localhost/phpmyadmin).
+
+			Cree una nueva base de datos llamada gymember_db.
+
+			Use la pestaña Importar para cargar el archivo gymember_db.sql.
+
+		Respaldo y Diagnóstico Rápido: Incluimos una copia de seguridad nombrada copia_gymember_db.sql. 
+		Si el archivo principal no visualiza información, puede renombrar esta copia a gymember_db.sql e importarla para operar la página.
+
+
+	3. Ejecución del ProyectoUna vez configurada la base de datos, acceda a la página principal a través de su navegador:
+
+	http://localhost/gymember/
+
+Quedamos a su disposición para cualquier consulta.
+
+Atentamente,
+Barreto Daira, Cocabia Luis, Flores Damian

@@ -1,0 +1,96 @@
+/* ----------------------------- */
+/* ESTILOS SOLO PARA EL FORMULARIO */
+/* ----------------------------- */
+
+/* Contenedor general del form */
+.contenedor-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+}
+
+/* Títulos */
+.contenedor-form h1,
+.contenedor-form h2 {
+  color: var(--text);
+  font-family: var(--font-primary);
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+/* Etiquetas y campos */
+.contenedor-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  font-family: var(--font-second);
+}
+
+.contenedor-form input,
+.contenedor-form select {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 10px;
+  background: #1f1f23;
+  color: #fff;
+  margin-top: 0.3rem;
+  font-family: var(--font-second);
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.contenedor-form input:focus,
+.contenedor-form select:focus {
+  outline: none;
+  border: 1px solid var(--accent);
+  background: #242428;
+}
+
+/* Secciones dinámicas (tarjeta / transferencia / efectivo) */
+.metodo {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  border-left: 3px solid var(--accent);
+  background: #161616;
+  border-radius: 8px;
+}
+
+.oculto {
+  display: none;
+}
+
+/* Botón principal */
+.btn-enviar {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 12px 22px;
+  font-family: var(--font-second);
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--accent);
+  color: var(--text);
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+.btn-enviar:hover {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+/* Mensaje explicativo del comprobante */
+.contenedor-form p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.5rem;
+}

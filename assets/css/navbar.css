@@ -1,0 +1,295 @@
+/* ----------------------------- */
+/* NAVBAR / HEADER               */
+/* ----------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg--soft);
+  backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 15px 20px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  background: var(--bg);
+}
+
+.main-nav a {
+  color: var(--text);
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: background .2s ease, color .2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--accent);
+}
+
+.logo_gym {
+  color: var(--accent);
+}
+
+/* ----------------------------- */
+/* MENÚ DE USUARIO (DROPDOWN)   */
+/* ----------------------------- */
+.user-dropdown {
+  position: relative;
+}
+
+.user-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 20px;
+  transition: background 0.2s ease;
+}
+
+.user-toggle:hover {
+  background: #f2f2f2;
+}
+
+.icon-user {
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+.user-name {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.chev {
+  font-size: 1rem;
+  color: #aaa;
+  transition: transform 0.3s ease;
+}
+
+/* ----------------------------- */ 
+/* Estilos del Dropdown (Menú) */
+/* ----------------------------- */
+/* === Menú de usuario === */
+.user-dropdown {
+  position: relative;
+}
+
+.user-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  font-family: var(--font-second);
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+
+.user-toggle:hover {
+  background: var(--bg-soft);
+}
+
+.icon-user {
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+
+.user-name {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.chev {
+  font-size: 1rem;
+  color: var(--muted);
+  transition: transform 0.3s ease;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  width: 220px;
+  z-index: 99;
+  display: none;
+  flex-direction: column;
+}
+
+.dropdown.show {
+  display: flex;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown ul {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  margin: 0;
+  background: var(--bg);
+}
+
+.dropdown li {
+  width: 100%;
+  
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 16px;
+  color: var(--text);
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.dropdown a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent);
+}
+
+.divider {
+  height: 1px;
+  background: rgba(54, 52, 52, 0.1);
+  margin: 6px 0;
+}
+
+.dropdown-title {
+  font-size: 0.8rem;
+  color: var(--accent);
+  padding: 6px 16px;
+  text-transform: uppercase;
+  
+}
+
+.logout {
+  color: #ff4c88 !important;
+}
+.logout:hover {
+  background: rgba(255, 76, 76, 0.1);
+  color: #ff4c73 !important;
+}
+
+/* ----------------------------- */
+/* RESPONSIVE                    */
+/* ----------------------------- */
+@media (max-width: 800px) {
+  .main-nav ul {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+/* ----------------------------- */
+/* BOTÓN HAMBURGUESA / BURGER    */
+/* ----------------------------- */
+.menu-toggle {
+  display: none; /* oculto por defecto en desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  margin-left: auto;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--text);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animación al abrir/cerrar a */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ----------------------------- */
+/* RESPONSIVE DEL MENÚ           */
+/* ----------------------------- */
+@media (max-width: 1000px) {
+  .menu-toggle {
+    display: flex; /* se muestra en pantallas pequeñas */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--muted1);
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px 0 0 8px;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1050;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+

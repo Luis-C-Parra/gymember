@@ -1,0 +1,419 @@
+/* ----------------------------- */
+/* CRUD - EXTENSIÓN DE STYLE.CSS */
+/* ----------------------------- */
+
+.titulo {
+  margin: 40px 0 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+/* ----------------------------- */
+/* TABLAS                        */
+/* ----------------------------- */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: var(--font-second) !important;
+  margin-bottom: 60px; 
+}
+
+.tabla thead {
+  background: var(--bg-soft);
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.tabla th,
+.tabla td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.tabla tbody tr:hover {
+  background: #1a1b21;
+}
+
+.acciones-tabla {
+  display: flex;
+  gap: 8px;
+}
+
+/* ----------------------------- */
+/* BOTONES                       */
+/* ----------------------------- */
+.btn-danger {
+  border-color: #f44336;
+  color: #f44336;
+}
+
+.btn-danger:hover {
+  background: #f44336;
+  color: white;
+}
+
+/* ----------------------------- */
+/* FORMULARIOS                   */
+/* ----------------------------- */
+.formulario {
+  max-width: 500px;
+  margin: 40px auto 80px; 
+  background: var(--card);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.formulario input,
+.formulario select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  margin-bottom: 18px;
+  font-family: inherit;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  outline: 1px solid var(--accent);
+}
+
+.formulario .acciones {
+  justify-content: space-between;
+}
+
+/* ----------------------------- */
+/* ÍTEMS DE PLANES               */
+/* ----------------------------- */
+.grid-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 15px;
+  margin-bottom: 20px;
+}
+
+.item-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.item-row input {
+  flex: 1;
+}
+
+.item-row select {
+  width: 80px;
+}
+
+.checklinea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0 25px;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+/* ----------------------------- */
+/* VISTA DETALLE DE PLAN         */
+/* ----------------------------- */
+.ver-plan .card {
+  max-width: 400px;
+  margin: 0 auto;
+  background: var(--bg-soft);
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.ver-plan p {
+  margin: 8px 0;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.ver-plan .acciones-centro {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* ----------------------------- */
+/* BENEFICIOS - EDICIÓN DE PLAN  */
+/* ----------------------------- */
+.beneficios-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.beneficio-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.beneficio-row label {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.beneficio-campo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.beneficio-campo select {
+  width: 60px;
+  padding: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-soft);
+  color: var(--text);
+}
+
+.beneficio-campo input {
+  flex: 1;
+}
+
+.checklinea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 10px;
+}
+
+.checklinea input[type="checkbox"] {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+/* Toggle switch */
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 10px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch .slider {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: var(--border);
+  border-radius: 34px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.toggle-switch .slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.toggle-switch input:checked + .slider {
+  background-color: var(--accent);
+}
+
+.toggle-switch input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+.toggle-switch label {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--border);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--accent);
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+
+/* ----------------------------- */
+/* BUSCADOR DE USUARIOS          */
+/* ----------------------------- */
+#usuario {
+  position: relative;
+}
+
+.buscador-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.buscador-wrapper input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-soft);
+  color: var(--text);
+  font-family: inherit;
+}
+
+#resultados-usuarios {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--text);
+  border-radius: 8px;
+  margin-top: 2px;
+  list-style: none;
+  padding: 0;
+  color: var(--bg);
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 15;
+  font-size: 14px;
+}
+
+#resultados-usuarios li {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#resultados-usuarios li:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+#resultados-usuarios .no-result {
+  text-align: center;
+  color: var(--muted);
+  padding: 8px;
+}
+
+textarea {
+  resize: none !important;
+  min-height: 100px;
+  max-height: 150px;
+  width: 100%;
+  margin-bottom: 16px;
+  overflow-y: auto;
+  font-family: inherit;
+}
+
+/* --- BUSCADOR + FILTROS EN USUARIOS --- */
+.acciones-usuarios {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filtros-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-buscador {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-soft);
+  color: var(--text1);
+  width: 220px;
+  font-family: inherit;
+}
+
+.input-buscador:focus {
+  outline: 1px solid var(--accent);
+}
+
+.select-filtro {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text1);
+  padding: 8px 10px;
+  font-family: inherit;
+}
+.select-filtro:focus {
+  outline: 1px solid var(--accent);
+}
